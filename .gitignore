@@ -6,3 +6,6 @@ coverage/
 *.log
 .env*
 !.env.example
+/Portfolio/
+public/portfolio.pdf
+.claude/

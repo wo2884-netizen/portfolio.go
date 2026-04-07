@@ -191,6 +191,7 @@ interface Project {
   images: string[];
   link: string;
   isPdf?: boolean;
+  portfolioImage?: string;
 }
 
 interface TimelineEntry {
@@ -366,7 +367,8 @@ const initialProjects: Project[] = [
     description: '하드웨어 월렛 디센트(D\'CENT)의 브랜드 아이덴티티 강화 및 사용자 경험 개선. Web3 생태계에서의 신뢰감 있는 비주얼 전략 수립.',
     keywords: ['Web3', 'Blockchain', 'Hardware Wallet', 'Brand Identity'],
     images: ['https://picsum.photos/seed/iotrust/1200/800'],
-    link: '#PROJECT'
+    link: '#PROJECT',
+    portfolioImage: '아이오트러스트.png'
   },
   {
     id: '2',
@@ -375,7 +377,8 @@ const initialProjects: Project[] = [
     description: '브로스코의 브랜드 아이덴티티 및 제품 디자인 고도화. 캐릭터 IP를 활용한 다양한 제품 기획 및 디자인.',
     keywords: ['Product Design', 'Brand Identity', '3D Assets', 'IP Business'],
     images: ['https://picsum.photos/seed/brosko/1200/800'],
-    link: '#PROJECT'
+    link: '#PROJECT',
+    portfolioImage: '브로스코.png'
   },
   {
     id: '3',
@@ -384,14 +387,15 @@ const initialProjects: Project[] = [
     description: '신선식품 D2C 플랫폼의 모바일 앱 고도화 및 프로모션 디자인. 사용자 구매 전환율 향상을 위한 UX 최적화.',
     keywords: ['E-commerce', 'D2C', 'Mobile App', 'Conversion UX'],
     images: ['https://picsum.photos/seed/glyde/1200/800'],
-    link: '#PROJECT'
+    link: '#PROJECT',
+    portfolioImage: '글라이드.png'
   }
 ];
 
 const initialTimeline: TimelineEntry[] = [
   {
     id: '1',
-    year: '2022 - Present',
+    year: '2022 - 2026',
     company: '아이오트러스트 (IoTrust)',
     role: 'BX Designer & AI Lead',
     description: '브랜드 아이덴티티 강화 및 AI 워크플로우 도입 주도.'
@@ -436,7 +440,7 @@ const initialSiteConfig: SiteConfig = {
   globalFontSize: 16,
   globalFontWeight: '400',
   navLabels: {
-    about: 'ABOUT',
+    about: 'RESUME',
     company: 'COMPANY DESCRIPTION',
     project: 'PROJECT',
     subcontract: 'SUBCONTRACT'
@@ -588,7 +592,7 @@ const initialSiteConfig: SiteConfig = {
         workplace: '근무지'
       },
       items: [
-        { id: '1', name: '아이오트러스트', role: 'BX Designer', period: '2022 - Present', reason: '-', business: 'Blockchain/Web3', scale: 'Mid-size', revenue: '-', employees: '50+', workplace: 'Seoul, Korea' }
+        { id: '1', name: '아이오트러스트', role: 'BX Designer', period: '2022 - 2026', reason: '-', business: 'Blockchain/Web3', scale: 'Mid-size', revenue: '-', employees: '50+', workplace: 'Seoul, Korea' }
       ]
     },
     project: {
@@ -1271,6 +1275,7 @@ function App() {
   const [trackedUrls, setTrackedUrls] = useState<{ [url: string]: number }>({});
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
   const [saveErrorMessage, setSaveErrorMessage] = useState<string | null>(null);
+  const [portfolioViewerImage, setPortfolioViewerImage] = useState<string | null>(null);
 
   // Draft states for Admin Panel
   const [draftConfig, setDraftConfig] = useState<SiteConfig>(siteConfig);
@@ -1609,9 +1614,9 @@ function App() {
           )}
         </button>
         <div className="hidden md:flex gap-8 text-sm font-medium">
+          <button onClick={() => { setActiveModal(null); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="hover:text-accent-purple transition-colors">HOME</button>
           <button onClick={() => setActiveModal('about')} className="hover:text-accent-purple transition-colors">{siteConfig.navLabels.about}</button>
           <button onClick={() => setActiveModal('company')} className="hover:text-accent-purple transition-colors">{siteConfig.navLabels.company}</button>
-          <button onClick={() => setActiveModal('portfolio')} className="hover:text-accent-purple transition-colors">{siteConfig.navLabels.project}</button>
         </div>
         <button 
           onClick={() => setIsAdminOpen(true)}
@@ -1677,12 +1682,12 @@ function App() {
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <a 
-                        href={project.link}
+                      <button
+                        onClick={() => project.portfolioImage && setPortfolioViewerImage(project.portfolioImage)}
                         className="bg-white text-black px-6 py-3 rounded-[10px] font-bold flex items-center gap-2"
                       >
                         View Project &gt;
-                      </a>
+                      </button>
                     </div>
                   </div>
                   <div className="p-8 h-full flex flex-col">
@@ -3810,6 +3815,36 @@ function App() {
                 </div>
               </div>
             )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Portfolio Image Viewer Modal */}
+      <AnimatePresence>
+        {portfolioViewerImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[300] bg-black/95 flex flex-col"
+            onClick={() => setPortfolioViewerImage(null)}
+          >
+            <div className="flex justify-between items-center p-4 px-6 border-b border-white/10 glass-morphism" onClick={e => e.stopPropagation()}>
+              <h2 className="text-lg font-bold">{portfolioViewerImage.replace('.png', '')} — Portfolio</h2>
+              <button
+                onClick={() => setPortfolioViewerImage(null)}
+                className="p-2 hover:bg-white/10 rounded-[10px] transition-colors"
+              >
+                <X size={24} />
+              </button>
+            </div>
+            <div className="flex-1 overflow-y-auto flex justify-center p-6" onClick={e => e.stopPropagation()}>
+              <img
+                src={`${import.meta.env.BASE_URL}portfolio/${portfolioViewerImage}`}
+                alt={portfolioViewerImage.replace('.png', '')}
+                className="max-w-4xl w-full h-auto object-contain rounded-[10px]"
+              />
             </div>
           </motion.div>
         )}
