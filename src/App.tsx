@@ -370,12 +370,13 @@ const initialSiteConfig: SiteConfig = {
   projectsLabel: 'Selected Works',
   projectsTitle: 'Main Projects',
   skills: [
-    { id: '1', name: 'Photoshop', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg' },
-    { id: '2', name: 'Illustrator', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg' },
-    { id: '5', name: 'XD', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg' },
-    { id: '3', name: 'Figma', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg' },
-    { id: '4', name: 'Sketch', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/5/59/Sketch_Logo.svg' },
-    { id: '7', name: 'Ai (Gemini, Claude)', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg' }
+    { id: '1', name: 'Photoshop', iconImage: `${import.meta.env.BASE_URL}images/Photoshop.png` },
+    { id: '2', name: 'Illustrator', iconImage: `${import.meta.env.BASE_URL}images/Illustrator.png` },
+    { id: '5', name: 'XD', iconImage: `${import.meta.env.BASE_URL}images/XD.png` },
+    { id: '3', name: 'Figma', iconImage: `${import.meta.env.BASE_URL}images/Figma.png` },
+    { id: '4', name: 'Sketch', iconImage: `${import.meta.env.BASE_URL}images/Sketch.png` },
+    { id: '7', name: 'Ai (Gemini, Claude)', iconImage: `${import.meta.env.BASE_URL}images/Gemini.png` },
+    { id: '8', name: 'Sopify', iconImage: `${import.meta.env.BASE_URL}images/Sopify.png` }
   ],
   workflowLeft: [
     { id: '1', step: 'Step.1', title: 'Research', desc: '시장 조사 및 경쟁사\n분석을 통한\n인사이트 도출', note: '', icon: 'BarChart3' },
@@ -403,7 +404,7 @@ const initialSiteConfig: SiteConfig = {
         birthDate: '1993. 06. 04',
         phone: '+82 10 - 6333 - 6419',
         email: 'fp2213@naver.com',
-        photo: 'https://picsum.photos/seed/profile/400/400'
+        photo: `${import.meta.env.BASE_URL}images/profile.png`
       },
       skills: [
         { id: '1', name: 'Photoshop', level: '상' },
