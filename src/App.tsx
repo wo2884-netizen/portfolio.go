@@ -231,79 +231,116 @@ interface SiteConfig {
 const initialProjects: Project[] = [
   {
     id: '1',
-    title: '아이오트러스트 (IoTrust)',
-    category: 'BX/UX Design',
-    description: '하드웨어 월렛 디센트(D\'CENT)의 브랜드 아이덴티티 강화 및 사용자 경험 개선. Web3 생태계에서의 신뢰감 있는 비주얼 전략 수립.',
-    keywords: ['Web3', 'Blockchain', 'Hardware Wallet', 'Brand Identity'],
-    images: ['https://picsum.photos/seed/iotrust/1200/800'],
+    title: '(주)아이오트러스트',
+    category: 'Web Design / BX',
+    description: 'CRM 자동 발송 메일 개편, 제품 판매 페이지 리뉴얼 및 AI Agent 생성/배포',
+    keywords: ['Web3', 'Blockchain', 'Web Design', 'AI Agent'],
+    images: [`${import.meta.env.BASE_URL}images/아이오트러스트_main.png`],
     link: '#PROJECT',
     portfolioImage: '아이오트러스트.png'
   },
   {
     id: '2',
-    title: '(주)브로스코',
-    category: 'Product Design',
-    description: '브로스코의 브랜드 아이덴티티 및 제품 디자인 고도화. 캐릭터 IP를 활용한 다양한 제품 기획 및 디자인.',
-    keywords: ['Product Design', 'Brand Identity', '3D Assets', 'IP Business'],
-    images: ['https://picsum.photos/seed/brosko/1200/800'],
+    title: '머티리얼즈파크(주)',
+    category: 'VMD / Brand',
+    description: '글로벌 브랜드 \'LIFE\'의 VMD 총괄. 뉴욕 본사 승인을 거친 온·오프라인 디자인 가이드 리딩 / 성수동 팝업스토어 기획으로 자사몰 유입 및 구매 전환 성과를 창출.',
+    keywords: ['VMD', 'Global Brand', 'Popup Store', 'E-commerce'],
+    images: [`${import.meta.env.BASE_URL}images/머티리얼즈파크_main.png`],
     link: '#PROJECT',
-    portfolioImage: '브로스코.png'
+    portfolioImage: '머티리얼즈파크.png'
   },
   {
     id: '3',
-    title: '글라이드 (Glyde)',
-    category: 'E-commerce Design',
-    description: '신선식품 D2C 플랫폼의 모바일 앱 고도화 및 프로모션 디자인. 사용자 구매 전환율 향상을 위한 UX 최적화.',
-    keywords: ['E-commerce', 'D2C', 'Mobile App', 'Conversion UX'],
-    images: ['https://picsum.photos/seed/glyde/1200/800'],
+    title: '(주)글라이드',
+    category: 'Web / SNS Design',
+    description: '라이브방송 기획 및 출연, 상세페이지/웹배너 제작, SNS(Instagram, Meta, Youtube) 운영',
+    keywords: ['E-commerce', 'SNS', 'Live Commerce', 'Web Banner'],
+    images: [`${import.meta.env.BASE_URL}images/글라이드_main.png`],
     link: '#PROJECT',
     portfolioImage: '글라이드.png'
+  },
+  {
+    id: '4',
+    title: '한국정보기술(주)',
+    category: 'Proposal Design',
+    description: '조달청/지자체 대상 ICT 사업 수주 총 52건의 제안서와 발표 자료 디자인을 통한 공공 입찰 시각화 전략',
+    keywords: ['Proposal', 'PPT Design', 'Public Sector', 'B2G'],
+    images: [`${import.meta.env.BASE_URL}images/한국정보기술_main.png`],
+    link: '#PROJECT',
+    portfolioImage: '한국정보기술.png'
+  },
+  {
+    id: '5',
+    title: '(주)브로스코',
+    category: 'Product Design',
+    description: '라이선스 상품화 디자인 제작/검수 및 온·오프라인 프로모션 디자인',
+    keywords: ['Product Design', 'License', 'Character IP', 'Promotion'],
+    images: [`${import.meta.env.BASE_URL}images/브로스코_main.png`],
+    link: '#PROJECT',
+    portfolioImage: '브로스코.png'
   }
 ];
 
 const initialTimeline: TimelineEntry[] = [
   {
     id: '1',
-    year: '2022 - 2026',
-    company: '아이오트러스트 (IoTrust)',
-    role: 'BX Designer & AI Lead',
-    description: '브랜드 아이덴티티 강화 및 AI 워크플로우 도입 주도.'
+    year: '2025 - Present',
+    company: '(주)아이오트러스트',
+    role: 'Web Designer',
+    description: 'CRM 자동 발송 메일 개편, 제품 판매 페이지 리뉴얼 및 AI Agent 생성/배포'
   },
   {
     id: '2',
-    year: '2020 - 2022',
-    company: '머티리얼즈파크',
-    role: 'Global VMD & E-commerce Operations',
-    description: '글로벌 VMD 전략 수립 및 이커머스 운영 최적화.'
+    year: '2023 - 2025',
+    company: '머티리얼즈파크(주)',
+    role: 'VMD',
+    description: '솔브레인㈜ 임직원몰 운영, 캠핑 브랜드(LIFE) VMD 담당'
   },
   {
     id: '3',
-    year: '2018 - 2020',
-    company: '글라이드 (하림그룹)',
-    role: 'Performance BX Designer',
-    description: '퍼포먼스 마케팅 기반의 브랜드 디자인 및 UX 개선.'
+    year: '2020 - 2023',
+    company: '(주)글라이드',
+    role: 'Web/SNS Designer',
+    description: '라이브방송 기획 및 출연, 상세페이지/웹배너 제작, SNS(Instagram, Meta, Youtube) 운영'
   },
   {
     id: '4',
-    year: '2015 - 2018',
-    company: '카카오 / 브로스코 / 한국정보기술',
-    role: '디자인 인턴 및 실무 경험',
-    description: '다양한 IT 기업에서의 디자인 실무 및 리서치 경험.'
+    year: '2018 - 2020',
+    company: '한국정보기술(주)',
+    role: 'Proposal(PPT) Designer',
+    description: '조달청/지자체 제출용 제안서 및 발표자료 디자인(52건)'
+  },
+  {
+    id: '5',
+    year: '2016 - 2018',
+    company: '(주)브로스코',
+    role: 'Product Designer',
+    description: '라이선스 상품화 디자인 제작/검수 및 온·오프라인 프로모션 디자인'
+  },
+  {
+    id: '6',
+    year: '2015 - 2016',
+    company: '(주)카카오',
+    role: 'UX Researcher',
+    description: '앱 별 사용자 분석 및 결과보고서 작성, UX 분석용 임팩트 영상 편집'
   }
 ];
 
 const initialAwards: AwardEntry[] = [
-  { id: '1', year: '2023', title: 'MOS Excel® Expert', organization: 'Microsoft' },
-  { id: '2', year: '2023', title: 'MOS Word® Expert', organization: 'Microsoft' },
-  { id: '3', year: '2023', title: 'MOS PowerPoint® Expert', organization: 'Microsoft' },
-  { id: '4', year: '2022', title: '컴퓨터그래픽스운용기능사', organization: '한국산업인력공단' }
+  { id: '1', year: '1급', title: '컴퓨터 그래픽스운용기능사', organization: '한국산업인력공단' },
+  { id: '2', year: '1급', title: '그래픽기술자격(GTQ)', organization: '한국생산성본부' },
+  { id: '3', year: '2010', title: 'MOS PowerPoint®', organization: 'Microsoft' },
+  { id: '4', year: '2010 Expert', title: 'MOS Word®', organization: 'Microsoft' },
+  { id: '5', year: '2010 Expert', title: 'MOS Excel®', organization: 'Microsoft' },
+  { id: '6', year: '2급', title: '산업레크리에이션 지도자', organization: '한국체육지도자협회' },
+  { id: '7', year: '2종', title: '자동차 운전면허 2종 보통', organization: '경찰청' }
 ];
 
 const initialSiteConfig: SiteConfig = {
   siteTitle: 'HEE SEUNG PF',
   siteLogo: '',
-  heroTagline: '기획서대로 그리는 작업을 넘어, 비즈니스의 성과를 디자인합니다.',
-  heroSubtitle: '기획부터 디자인 그리고 GA분석까지 하는 BX디자이너 고희승입니다.',
+  heroTagline: '기획부터 디자인까지\nBX 디자이너 고희승입니다.',
+  heroSubtitle: 'A Person Who Controls The AI',
   readCaseStudyLabel: '이력서 바로 보기',
   accentColor: '#8B5CF6',
   globalFontSize: 16,
@@ -316,7 +353,7 @@ const initialSiteConfig: SiteConfig = {
   },
   footerContact: {
     email: 'fp221227@gmail.com',
-    phone: '010-XXXX-XXXX'
+    phone: '010-6333-6419'
   },
   footerTitle: "Let's Create Something",
   footerSubtitle: "Extraordinary",
@@ -325,38 +362,32 @@ const initialSiteConfig: SiteConfig = {
   backgroundImage: undefined,
   expertiseLabel: 'Expertise',
   expertiseTitle: 'Skill & Workflow',
-  workflowSectionTitle: 'AI Workflow for Designers',
-  workflowTitleLeft: 'Design Workflow',
-  workflowTitleRight: 'AI Workflow',
+  workflowSectionTitle: 'Workflows',
+  workflowTitleLeft: 'Design',
+  workflowTitleRight: 'AI',
   experienceTitle: 'Experience',
-  awardsTitle: 'License',
+  awardsTitle: 'Certifications',
   projectsLabel: 'Selected Works',
   projectsTitle: 'Main Projects',
   skills: [
     { id: '1', name: 'Photoshop', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg' },
     { id: '2', name: 'Illustrator', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg' },
     { id: '5', name: 'XD', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg' },
-    { id: '14', name: 'Powerpoint', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg' },
     { id: '3', name: 'Figma', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg' },
     { id: '4', name: 'Sketch', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/5/59/Sketch_Logo.svg' },
-    { id: '7', name: 'Gemini', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg' },
-    { id: '8', name: 'Dzine', iconImage: 'https://framerusercontent.com/images/X6vJ6vX6vJ6vX6vJ6vX6vJ6v.png' },
-    { id: '9', name: 'Claude', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Claude_AI_logo.svg' },
-    { id: '10', name: 'GitHub', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' },
-    { id: '11', name: 'VS Code', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg' },
-    { id: '13', name: 'Capcut', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/CapCut_logo.svg' }
+    { id: '7', name: 'Ai (Gemini, Claude)', iconImage: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg' }
   ],
   workflowLeft: [
-    { id: '1', step: '01', title: 'Research', desc: '시장 조사 및 경쟁사 분석을 통한 인사이트 도출', note: '', icon: 'BarChart3' },
-    { id: '2', step: '02', title: 'Strategy', desc: '브랜드 전략 수립 및 핵심 가치 정의', note: '', icon: 'Lightbulb' },
-    { id: '3', step: '03', title: 'Design', desc: '비주얼 아이덴티티 및 UI/UX 디자인 시스템 구축', note: '', icon: 'Palette' },
-    { id: '4', step: '04', title: 'Review', desc: '사용자 테스트 및 피드백 기반의 디자인 고도화', note: '', icon: 'CheckCircle2' }
+    { id: '1', step: 'Step.1', title: 'Research', desc: '시장 조사 및 경쟁사\n분석을 통한\n인사이트 도출', note: '', icon: 'BarChart3' },
+    { id: '2', step: 'Step.2', title: 'Strategy', desc: '핵심 USP 정의\n> 이미지/ 내용 가독\n우선순위 선정', note: '', icon: 'Lightbulb' },
+    { id: '3', step: 'Step.3', title: 'Design', desc: '이미지 편집: Photoshop\n이미지 생성: Gemini, Dzine\n인쇄: Illustrator\n페이지: Figma\n프로그램 우선 작업', note: '', icon: 'Palette' },
+    { id: '4', step: 'Step.4', title: 'Review & Plan', desc: 'GA 결과값 데이터화\n: CTR/ROAS 분석,\n차기 프로젝트 반영', note: '', icon: 'CheckCircle2' }
   ],
   workflowRight: [
-    { id: '1', step: '01', title: 'Analysis', desc: 'GA분석 및 데이터 기반의 사용자 페르소나 도출', note: '', icon: 'BarChart3' },
-    { id: '2', step: '02', title: 'Ideation', desc: 'Gemini & Claude를 활용한 컨셉 브레인스토밍', note: '', icon: 'Lightbulb' },
-    { id: '3', step: '03', title: 'Generation', desc: 'Dzine & AI 툴을 이용한 고퀄리티 비주얼 에셋 생성', note: '', icon: 'Sparkles' },
-    { id: '4', step: '04', title: 'Output', desc: '일관성 있는 디자인 시스템 구축 및 3D 아이콘 생성 가이드 적용', note: '"3D 아이콘 생성 가이드: 일관된 조명값과 재질감을 유지하며 브랜드 아이덴티티를 강화하는 워크플로우..."', icon: 'CheckCircle2' }
+    { id: '1', step: 'Step.1', title: 'Recognition', desc: '반복적/ 긴소요시간/ 톤앤매너 통일이\n필요한 디자인 작업물 인지', note: '', icon: 'BarChart3' },
+    { id: '2', step: 'Step.2', title: 'Frame Build', desc: '기본 가이드라인 구축:\n구글Gem > 제이슨프롬포트(HTML)\n에셋 생성', note: '', icon: 'Lightbulb' },
+    { id: '3', step: 'Step.3', title: 'Coding', desc: 'VScode 내 클로드코드를 활용한\n스타일 가이드 생성', note: '', icon: 'Code' },
+    { id: '4', step: 'Step.4', title: 'Share', desc: 'Github 등록 후 팀원 전체 사용 가능한\n디자인 Ai 공유 > 프로세스화 및\n오류 수정/업데이트', note: '', icon: 'CheckCircle2' }
   ],
   portfolioPdfUrl: '',
   portfolioPdfName: '고희승_포트폴리오_2025.pdf',
@@ -378,28 +409,25 @@ const initialSiteConfig: SiteConfig = {
         { id: '1', name: 'Photoshop', level: '상' },
         { id: '2', name: 'Illustrator', level: '상' },
         { id: '5', name: 'XD', level: '중' },
-        { id: '14', name: 'Powerpoint', level: '상' },
         { id: '3', name: 'Figma', level: '상' },
         { id: '4', name: 'Sketch', level: '상' },
-        { id: '7', name: 'Gemini', level: '상' },
-        { id: '8', name: 'Dzine', level: '중' },
-        { id: '9', name: 'Claude', level: '상' },
-        { id: '10', name: 'GitHub', level: '중' },
-        { id: '11', name: 'VS Code', level: '상' },
-        { id: '13', name: 'Capcut', level: '중' }
+        { id: '7', name: 'Ai (Gemini, Claude code)', level: '상' }
       ],
       experience: [
-        { id: '1', period: '2015. 12. 08 - 2016. 06. 08', role: 'UX Research Part', company: 'Kakao', job: '' },
-        { id: '2', period: '2016. 03. 12 - 2018. 02. 28', role: '마케팅팀', company: 'Brosco', job: '' },
-        { id: '3', period: '2018. 03. 12 - 2020. 03. 31', role: '디자인팀', company: '한국정보기술', job: '' },
-        { id: '4', period: '2020. 06. 08 - 2023. 06. 30', role: 'C.X Unit', company: 'glyde', job: '' }
+        { id: '1', period: '2025.12.15 - 2026.03.05', role: '마케팅팀', company: '(주)아이오트러스트', job: 'CRM 자동 발송 메일 개편, 제품 판매 페이지 리뉴얼 및 AI Agent 생성/배포' },
+        { id: '2', period: '2023. 08. 03 - 2025. 05. 09', role: '이커머스팀', company: '머티리얼즈파크(주)', job: '솔브레인㈜ 임직원몰 운영, 캠핑 브랜드(LIFE) VMD 담당' },
+        { id: '3', period: '2020. 06. 08 - 2023. 06. 31', role: '마케팅팀', company: '(주)글라이드', job: '라이브방송 기획 및 출연, 상세페이지/웹배너 제작, SNS(Instagram, Meta, Youtube) 운영' },
+        { id: '4', period: '2018. 03. 12 - 2020. 03. 31', role: '디자인팀', company: '한국정보기술(주)', job: '조달청/지자체 제출용 제안서 및 발표자료 디자인(52건)' },
+        { id: '5', period: '2016. 07. 25 - 2018. 02. 28', role: '마케팅팀', company: '(주)브로스코', job: '라이선스 상품화 디자인 제작/검수 및 온·오프라인 프로모션 디자인' },
+        { id: '6', period: '2015. 12. 08 - 2016. 06. 08', role: 'UX Research part', company: '(주)카카오', job: '앱 별 사용자 분석 및 결과보고서 작성, UX 분석용 임팩트 영상 편집' }
       ],
       license: [
         { id: '1', name: '컴퓨터 그래픽스운용기능사 1급', issuer: '한국산업인력공단' },
         { id: '2', name: '그래픽기술자격(GTQ) 1급', issuer: '한국생산성본부' },
         { id: '3', name: 'MOS PowerPoint® 2010', issuer: 'Microsoft' },
         { id: '4', name: 'MOS Word® 2010 Expert', issuer: 'Microsoft' },
-        { id: '5', name: 'MOS Excel® 2010 Expert', issuer: 'Microsoft' }
+        { id: '5', name: 'MOS Excel® 2010 Expert', issuer: 'Microsoft' },
+        { id: '6', name: '산업레크리에이션 지도자 2급', issuer: '한국체육지도자협회' }
       ],
       award: [
         { id: '1', name: '제18회 통일문화제 / 웹 디자인 부분 특선', category: '웹 디자인', issuer: '평화문화재단' },
@@ -411,9 +439,9 @@ const initialSiteConfig: SiteConfig = {
         { id: '7', name: '2014 SOKI 국제디자인 일러스트레이션 공모전 / 일러스트 부분', category: '일러스트', issuer: '한국일러스트아트협회' }
       ],
       volunteer: [
-        { id: '1', period: '2016. 03 - 2016. 03', name: '(주)카카오 봉사', role: '베트남 자원봉사단' },
-        { id: '2', period: '2012. 04 - 2014. 06', name: '학부 자원봉사', role: '지체 장애인 아동 미술 치료' },
-        { id: '3', period: '2013. 05 - 2013. 10', name: '판교푸른학교', role: '미술 보조 교사' }
+        { id: '1', period: '2016. 03 - 2016. 03', name: '(주)카카오 해외 봉사', role: '베트남 자원봉사단 | 숍손 특수 장애학교 - 정문 벽화 디자인 담당' },
+        { id: '2', period: '2013. 05 - 2013. 10', name: '판교푸른학교', role: '미술 보조 교사 | 성남시 관할 공공기관(KT&G) 소속 - 원아관리/ 미술선생님으로 활동' },
+        { id: '3', period: '2012. 04 - 2014. 06', name: '지체 장애인 아동 심리 미술 치료', role: '교내 학부봉사' }
       ],
       education: [
         {
@@ -436,8 +464,8 @@ const initialSiteConfig: SiteConfig = {
       labels: {
         experienceTitle: 'Experience',
         experienceSubtitle: 'PROFESSIONAL JOURNEY',
-        licenseTitle: 'License',
-        licenseSubtitle: 'CERTIFICATIONS',
+        licenseTitle: 'Certifications',
+        licenseSubtitle: 'LICENSE',
         awardTitle: 'Award',
         awardSubtitle: 'RECOGNITIONS',
         volunteerTitle: 'Volunteer',
@@ -447,21 +475,25 @@ const initialSiteConfig: SiteConfig = {
       }
     },
     company: {
-      title: 'Let me introduce my past companies',
+      title: 'past companies',
       subtitle: '이전 근무지 요약본',
       labels: {
         name: 'Company Name',
-        role: '직무',
+        role: '업무',
         period: 'Period',
         reason: '퇴사 사유',
-        business: '사업 분야',
-        scale: '회사 규모',
-        revenue: '연매출',
-        employees: '임직원 수',
-        workplace: '근무지'
+        business: '직종',
+        scale: '기업 규모',
+        revenue: '매출액',
+        employees: '임직원',
+        workplace: '근무 위치'
       },
       items: [
-        { id: '1', name: '아이오트러스트', role: 'BX Designer', period: '2022 - 2026', reason: '-', business: 'Blockchain/Web3', scale: 'Mid-size', revenue: '-', employees: '50+', workplace: 'Seoul, Korea' }
+        { id: '1', name: '(주)아이오트러스트', role: 'Web Designer', period: '2025.12 ~ 2026.03', reason: '업 직종 전환', business: '블록체인/웹3', scale: '중소기업', revenue: '60억', employees: '54명', workplace: '서울 청담' },
+        { id: '2', name: '머티리얼즈파크(주)', role: 'Brand VMD', period: '2023.08 ~ 2025.05', reason: '직무 확장', business: 'B2C 도소매업', scale: '중소기업', revenue: '467억', employees: '110명', workplace: '성남 판교' },
+        { id: '3', name: '(주)글라이드', role: 'Web/SNS Design', period: '2020.06 ~ 2023.06', reason: '경영 악화', business: '식품 판매업', scale: '대기업', revenue: '32억', employees: '-', workplace: '성남 판교' },
+        { id: '4', name: '한국정보기술(주)', role: 'Proposal(PPT) Design', period: '2018.03 ~ 2020.03', reason: '근무 조건', business: '응용 소프트웨어 개발 및 공급업', scale: '중소기업', revenue: '726억', employees: '331명', workplace: '성남 판교' },
+        { id: '5', name: '(주)브로스코', role: 'Product Design', period: '2016.07 ~ 2018.02', reason: '조직 규모', business: '캐릭터 디자인 개발 라이센스 대행사', scale: '중소기업', revenue: '-', employees: '10+', workplace: '성남 판교' }
       ]
     },
     project: {
@@ -1087,62 +1119,10 @@ export default function AppWrapper() {
 // --- Main App ---
 
 function App() {
-  const [projects, setProjects] = useState<Project[]>(() => {
-    const saved = localStorage.getItem('projects');
-    try {
-      const parsed = saved ? JSON.parse(saved) : null;
-      return Array.isArray(parsed) ? parsed : initialProjects;
-    } catch { return initialProjects; }
-  });
-
-  const [timeline, setTimeline] = useState<TimelineEntry[]>(() => {
-    const saved = localStorage.getItem('timeline');
-    try {
-      const parsed = saved ? JSON.parse(saved) : null;
-      return Array.isArray(parsed) ? parsed : initialTimeline;
-    } catch { return initialTimeline; }
-  });
-
-  const [awards, setAwards] = useState<AwardEntry[]>(() => {
-    const saved = localStorage.getItem('awards');
-    try {
-      const parsed = saved ? JSON.parse(saved) : null;
-      return Array.isArray(parsed) ? parsed : initialAwards;
-    } catch { return initialAwards; }
-  });
-
-  const [siteConfig, setSiteConfig] = useState<SiteConfig>(() => {
-    const saved = localStorage.getItem('siteConfig');
-    try {
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        // Deep merge sections to prevent undefined errors
-        const mergedSections = { ...initialSiteConfig.sections };
-        if (parsed.sections) {
-          Object.keys(parsed.sections).forEach(key => {
-            const k = key as keyof typeof initialSiteConfig.sections;
-            if (mergedSections[k]) {
-              if (k !== 'about') {
-                const section = mergedSections[k] as SectionContent;
-                const parsedSection = parsed.sections[k] as Partial<SectionContent>;
-                mergedSections[k] = {
-                  ...section,
-                  ...parsedSection,
-                  items: parsedSection.items || section.items || []
-                } as any;
-              } else {
-                mergedSections[k] = { ...mergedSections[k], ...parsed.sections[k] };
-              }
-            }
-          });
-        }
-        return { ...initialSiteConfig, ...parsed, sections: mergedSections };
-      }
-    } catch (e) {
-      console.error('Error parsing siteConfig:', e);
-    }
-    return initialSiteConfig;
-  });
+  const [projects] = useState<Project[]>(initialProjects);
+  const [timeline] = useState<TimelineEntry[]>(initialTimeline);
+  const [awards] = useState<AwardEntry[]>(initialAwards);
+  const [siteConfig] = useState<SiteConfig>(initialSiteConfig);
 
   const [activeModal, setActiveModal] = useState<string | null>(null);
   const [portfolioViewerImage, setPortfolioViewerImage] = useState<string | null>(null);
@@ -1162,13 +1142,13 @@ function App() {
       />
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-[120] glass-morphism py-4 px-6 md:px-12 flex justify-between items-center">
+      <nav className="fixed top-0 left-0 right-0 z-[120] glass-morphism py-4 px-6 md:px-12 grid grid-cols-3 items-center">
         <button
           onClick={() => {
             setActiveModal(null);
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
-          className="text-xl font-bold tracking-tighter hover:opacity-80 transition-opacity"
+          className="text-xl font-bold tracking-tighter hover:opacity-80 transition-opacity justify-self-start"
         >
           {siteConfig.siteLogo ? (
             <img src={siteConfig.siteLogo} alt={siteConfig.siteTitle} className="h-8 object-contain" referrerPolicy="no-referrer" />
@@ -1176,11 +1156,12 @@ function App() {
             siteConfig.siteTitle
           )}
         </button>
-        <div className="hidden md:flex gap-8 text-sm font-medium">
+        <div className="hidden md:flex justify-center gap-8 text-sm font-medium">
           <button onClick={() => { setActiveModal(null); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="hover:text-accent-purple transition-colors">HOME</button>
           <button onClick={() => setActiveModal('about')} className="hover:text-accent-purple transition-colors">RESUME</button>
           <button onClick={() => setActiveModal('company')} className="hover:text-accent-purple transition-colors">COMPANY</button>
         </div>
+        <div />
       </nav>
 
       <main className="relative z-10 pt-32 px-6 md:px-12 max-w-7xl mx-auto">
