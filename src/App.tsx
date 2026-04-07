@@ -1197,6 +1197,20 @@ export default function AppWrapper() {
   );
 }
 
+const PORTFOLIO_IMAGE_MAP: { keyword: string; file: string }[] = [
+  { keyword: '아이오트러스트', file: '아이오트러스트.png' },
+  { keyword: '브로스코', file: '브로스코.png' },
+  { keyword: '글라이드', file: '글라이드.png' },
+  { keyword: '머티리얼즈파크', file: '머티리얼즈파크.png' },
+  { keyword: '한국정보기술', file: '한국정보기술.png' },
+];
+
+function getPortfolioImage(project: Project): string | null {
+  if (project.portfolioImage) return project.portfolioImage;
+  const match = PORTFOLIO_IMAGE_MAP.find(({ keyword }) => project.title.includes(keyword));
+  return match ? match.file : null;
+}
+
 function App() {
   const [projects, setProjects] = useState<Project[]>(() => {
     const saved = localStorage.getItem('projects');
@@ -1683,8 +1697,11 @@ function App() {
                     />
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                       <button
-                        onClick={() => project.portfolioImage && setPortfolioViewerImage(project.portfolioImage)}
-                        className="bg-white text-black px-6 py-3 rounded-[10px] font-bold flex items-center gap-2"
+                        onClick={() => {
+                          const img = getPortfolioImage(project);
+                          if (img) setPortfolioViewerImage(img);
+                        }}
+                        className="bg-white text-black px-6 py-3 rounded-[10px] font-bold flex items-center gap-2 cursor-pointer"
                       >
                         View Project &gt;
                       </button>
