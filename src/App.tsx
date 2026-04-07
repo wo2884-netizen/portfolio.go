@@ -284,7 +284,7 @@ const initialProjects: Project[] = [
 const initialTimeline: TimelineEntry[] = [
   {
     id: '1',
-    year: '2025 - Present',
+    year: '2025 - 2026',
     company: '(주)아이오트러스트',
     role: 'Web Designer',
     description: 'CRM 자동 발송 메일 개편, 제품 판매 페이지 리뉴얼 및 AI Agent 생성/배포'
@@ -370,13 +370,18 @@ const initialSiteConfig: SiteConfig = {
   projectsLabel: 'Selected Works',
   projectsTitle: 'Main Projects',
   skills: [
-    { id: '1', name: 'Photoshop', iconImage: `${import.meta.env.BASE_URL}images/Photoshop.png` },
-    { id: '2', name: 'Illustrator', iconImage: `${import.meta.env.BASE_URL}images/Illustrator.png` },
-    { id: '5', name: 'XD', iconImage: `${import.meta.env.BASE_URL}images/XD.png` },
-    { id: '3', name: 'Figma', iconImage: `${import.meta.env.BASE_URL}images/Figma.png` },
-    { id: '4', name: 'Sketch', iconImage: `${import.meta.env.BASE_URL}images/Sketch.png` },
-    { id: '7', name: 'Ai (Gemini, Claude)', iconImage: `${import.meta.env.BASE_URL}images/Gemini.png` },
-    { id: '8', name: 'Sopify', iconImage: `${import.meta.env.BASE_URL}images/Sopify.png` }
+    { id: '1', name: 'Figma', iconImage: `${import.meta.env.BASE_URL}images/Figma.png` },
+    { id: '2', name: 'Sketch', iconImage: `${import.meta.env.BASE_URL}images/Sketch.png` },
+    { id: '3', name: 'Adobe Photoshop', iconImage: `${import.meta.env.BASE_URL}images/Photoshop.png` },
+    { id: '4', name: 'Adobe Illustrator', iconImage: `${import.meta.env.BASE_URL}images/Illustrator.png` },
+    { id: '5', name: 'Adobe XD', iconImage: `${import.meta.env.BASE_URL}images/XD.png` },
+    { id: '6', name: 'Adobe Indesign', iconImage: '' },
+    { id: '7', name: 'Gemini', iconImage: `${import.meta.env.BASE_URL}images/Gemini.png` },
+    { id: '8', name: 'Dzine', iconImage: `${import.meta.env.BASE_URL}images/Dzine.png` },
+    { id: '9', name: 'Claude', iconImage: `${import.meta.env.BASE_URL}images/Claude.png` },
+    { id: '10', name: 'GitHub', iconImage: `${import.meta.env.BASE_URL}images/GitHub.png` },
+    { id: '11', name: 'VS Code', iconImage: '' },
+    { id: '12', name: 'Sopify', iconImage: `${import.meta.env.BASE_URL}images/Sopify.png` }
   ],
   workflowLeft: [
     { id: '1', step: 'Step.1', title: 'Research', desc: '시장 조사 및 경쟁사\n분석을 통한\n인사이트 도출', note: '', icon: 'BarChart3' },
@@ -811,10 +816,10 @@ const SectionModal = ({
                         <div key={exp.id} className="group relative pl-8 border-l-2 border-white/5 hover:border-accent-purple/50 transition-colors">
                           <div className="absolute left-[-5px] top-0 w-2 h-2 rounded-full bg-white/20 group-hover:bg-accent-purple transition-colors" />
                           <div className="flex flex-wrap justify-between items-start gap-4 mb-2">
-                            <h5 className="font-bold text-xl text-white/90 group-hover:text-accent-purple transition-colors">{exp.role}</h5>
+                            <h5 className="font-bold text-xl text-white/90 group-hover:text-accent-purple transition-colors">{exp.company}</h5>
                             <span className="text-[10px] bg-white/5 px-3 py-1 rounded-full text-white/40 font-mono border border-white/5">{exp.period}</span>
                           </div>
-                          <p className="text-white/50 font-medium">{exp.company}</p>
+                          <p className="text-white/50 font-medium">{exp.role}</p>
                           {exp.job && <p className="text-white/40 text-sm mt-2 leading-relaxed">{exp.job}</p>}
                         </div>
                       ))}
@@ -1272,15 +1277,11 @@ function App() {
                           <img
                             src={tool.iconImage}
                             alt={tool.name}
-                            className="w-10 h-10 object-cover rounded-sm"
+                            className="w-10 h-10 object-contain rounded-sm"
                             referrerPolicy="no-referrer"
-                            onError={(e) => {
-                              (e.target as HTMLImageElement).style.display = 'none';
-                              (e.target as HTMLImageElement).parentElement!.innerHTML = '<div class="text-accent-purple"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H2v10h10V2z"/><path d="m17.92 14 3.5 3.5-3.5 3.5"/><path d="M5 22h14"/><path d="M5 17h14"/><path d="M5 12h14"/></svg></div>';
-                            }}
                           />
                         ) : (
-                          <ToolIcon size={40} />
+                          <div className="w-10 h-10 rounded-sm border border-white/10 bg-white/5" />
                         )}
                       </div>
                       <span className="text-[10px] md:text-xs font-bold text-center leading-tight text-white/70 group-hover:text-white transition-colors">
