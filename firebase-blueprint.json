@@ -1,0 +1,53 @@
+{
+  "entities": {
+    "SiteConfig": {
+      "title": "Site Configuration",
+      "description": "General configuration for the portfolio site",
+      "type": "object",
+      "properties": {
+        "heroTitle": { "type": "string" },
+        "heroSubtitle": { "type": "string" },
+        "aboutTitle": { "type": "string" },
+        "aboutSubtitle": { "type": "string" },
+        "workflowSectionTitle": { "type": "string" },
+        "workflowTitleLeft": { "type": "string" },
+        "workflowTitleRight": { "type": "string" },
+        "experienceTitle": { "type": "string" },
+        "awardsTitle": { "type": "string" },
+        "footerTitle": { "type": "string" },
+        "footerSubtitle": { "type": "string" },
+        "skills": { "type": "array", "items": { "type": "object" } },
+        "workflowLeft": { "type": "array", "items": { "type": "object" } },
+        "workflowRight": { "type": "array", "items": { "type": "object" } },
+        "experience": { "type": "array", "items": { "type": "object" } },
+        "awards": { "type": "array", "items": { "type": "object" } },
+        "sections": { "type": "object" }
+      }
+    },
+    "Project": {
+      "title": "Project",
+      "description": "A portfolio project",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "description": { "type": "string" },
+        "keywords": { "type": "array", "items": { "type": "string" } },
+        "images": { "type": "array", "items": { "type": "string" } },
+        "order": { "type": "number" }
+      },
+      "required": ["id", "title"]
+    }
+  },
+  "firestore": {
+    "config/main": {
+      "schema": { "$ref": "SiteConfig" },
+      "description": "Main site configuration"
+    },
+    "projects/{projectId}": {
+      "schema": { "$ref": "Project" },
+      "description": "Individual project details"
+    }
+  }
+}

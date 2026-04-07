@@ -1,0 +1,57 @@
+@font-face {
+  font-family: '에이투지체';
+  src: url('/에이투지체.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "에이투지체", "Inter", "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
+  --color-bg-dark: #121212;
+  --color-bg-card: #1e1e1e;
+  --color-accent-purple: #8B5CF6;
+  --color-text-gray: #A1A1AA;
+  --radius-custom: 10px;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-white font-sans scroll-smooth overflow-x-hidden;
+  }
+  
+  /* Global border radius override */
+  .rounded-2xl, .rounded-xl, .rounded-lg {
+    border-radius: var(--radius-custom);
+  }
+}
+
+@layer utilities {
+  .purple-gradient {
+    background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
+  }
+  .glass-morphism {
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Centered text in shape with auto-shrink logic via container query or just flex */
+  .shape-text-container {
+    @apply flex items-center justify-center text-center p-4 overflow-hidden;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .shape-text {
+    @apply max-w-full max-h-full;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: keep-all;
+  }
+}

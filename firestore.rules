@@ -1,0 +1,85 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: config
+    // Document ID: main
+    // Fields:
+    //   - heroTitle: string
+    //   - heroSubtitle: string
+    //   - aboutTitle: string
+    //   - aboutSubtitle: string
+    //   - workflowSectionTitle: string
+    //   - workflowTitleLeft: string
+    //   - workflowTitleRight: string
+    //   - experienceTitle: string
+    //   - awardsTitle: string
+    //   - footerTitle: string
+    //   - footerSubtitle: string
+    //   - skills: list of objects
+    //   - workflowLeft: list of objects
+    //   - workflowRight: list of objects
+    //   - experience: list of objects
+    //   - awards: list of objects
+    //   - sections: map
+    //
+    // Collection: projects
+    // Document ID: {projectId}
+    // Fields:
+    //   - id: string (required)
+    //   - title: string (required)
+    //   - category: string
+    //   - description: string
+    //   - keywords: list of strings
+    //   - images: list of strings (Base64)
+    //   - order: number
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && 
+        (request.auth.token.email == "fp221227@gmail.com" && request.auth.token.email_verified == true);
+    }
+
+    function isValidConfig(data) {
+      return data.keys().hasAny(['heroTitle', 'heroSubtitle', 'skills', 'workflowLeft', 'workflowRight']);
+    }
+
+    function isValidProject(data) {
+      return data.id is string && data.id.size() > 0 &&
+             data.title is string && data.title.size() > 0 &&
+             data.title.size() < 200;
+    }
+
+    // ===============================================================
+    // Rules
+    // ===============================================================
+
+    // Public read access for the portfolio site
+    match /config/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /projects/{projectId} {
+      allow read: if true;
+      allow write: if isAdmin() && isValidProject(request.resource.data);
+    }
+
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
