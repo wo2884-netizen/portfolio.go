@@ -1629,8 +1629,8 @@ function App() {
         </button>
         <div className="hidden md:flex gap-8 text-sm font-medium">
           <button onClick={() => { setActiveModal(null); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="hover:text-accent-purple transition-colors">HOME</button>
-          <button onClick={() => setActiveModal('about')} className="hover:text-accent-purple transition-colors">{siteConfig.navLabels.about}</button>
-          <button onClick={() => setActiveModal('company')} className="hover:text-accent-purple transition-colors">{siteConfig.navLabels.company}</button>
+          <button onClick={() => setActiveModal('about')} className="hover:text-accent-purple transition-colors">RESUME</button>
+          <button onClick={() => setActiveModal('company')} className="hover:text-accent-purple transition-colors">COMPANY</button>
         </div>
         <button 
           onClick={() => setIsAdminOpen(true)}
