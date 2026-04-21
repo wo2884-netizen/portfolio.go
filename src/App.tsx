@@ -235,9 +235,9 @@ const initialProjects: Project[] = [
     category: 'Web Design / BX',
     description: 'CRM 자동 발송 메일 개편, 제품 판매 페이지 리뉴얼 및 AI Agent 생성/배포',
     keywords: ['Web3', 'Blockchain', 'Web Design', 'AI Agent'],
-    images: [`${import.meta.env.BASE_URL}images/아이오트러스트_main.png`],
+    images: [`${import.meta.env.BASE_URL}images/IOTrust_main.png`],
     link: '#PROJECT',
-    portfolioImage: '아이오트러스트.png'
+    portfolioImage: '1080_iotrust.jpg'
   },
   {
     id: '2',
@@ -247,7 +247,7 @@ const initialProjects: Project[] = [
     keywords: ['VMD', 'Global Brand', 'Popup Store', 'E-commerce'],
     images: [`${import.meta.env.BASE_URL}images/머티리얼즈파크_main.png`],
     link: '#PROJECT',
-    portfolioImage: '머티리얼즈파크.png'
+    portfolioImage: '1080_life.jpg'
   },
   {
     id: '3',
@@ -257,7 +257,7 @@ const initialProjects: Project[] = [
     keywords: ['E-commerce', 'SNS', 'Live Commerce', 'Web Banner'],
     images: [`${import.meta.env.BASE_URL}images/글라이드_main.png`],
     link: '#PROJECT',
-    portfolioImage: '글라이드.png'
+    portfolioImage: '1080_glyde.jpg'
   },
   {
     id: '4',
@@ -267,7 +267,7 @@ const initialProjects: Project[] = [
     keywords: ['Proposal', 'PPT Design', 'Public Sector', 'B2G'],
     images: [`${import.meta.env.BASE_URL}images/한국정보기술_main.png`],
     link: '#PROJECT',
-    portfolioImage: '한국정보기술.png'
+    portfolioImage: '1080_ki&t copy.jpg'
   },
   {
     id: '5',
@@ -277,7 +277,17 @@ const initialProjects: Project[] = [
     keywords: ['Product Design', 'License', 'Character IP', 'Promotion'],
     images: [`${import.meta.env.BASE_URL}images/브로스코_main.png`],
     link: '#PROJECT',
-    portfolioImage: '브로스코.png'
+    portfolioImage: '1080_Brosco.jpg'
+  },
+  {
+    id: '6',
+    title: '(주)카카오',
+    category: 'Ux Research',
+    description: '앱 별 사용자 분석 및 결과보고서 작성, UX 분석용 임팩트 영상 편집',
+    keywords: ['UX Research', 'User Analysis', 'Video Editing'],
+    images: [`${import.meta.env.BASE_URL}images/Kakao_main.png`],
+    link: '#PROJECT',
+    portfolioImage: 'Kakao_UX_Research.pdf'
   }
 ];
 
@@ -338,7 +348,7 @@ const initialAwards: AwardEntry[] = [
 
 const initialSiteConfig: SiteConfig = {
   siteTitle: 'HEE SEUNG PF',
-  siteLogo: '',
+  siteLogo: `${import.meta.env.BASE_URL}images/GoHS_logo.png`,
   heroTagline: '기획부터 디자인까지\nBX 디자이너 고희승입니다.',
   heroSubtitle: 'A Person Who Controls The AI',
   readCaseStudyLabel: '이력서 바로 보기',
@@ -372,28 +382,28 @@ const initialSiteConfig: SiteConfig = {
   skills: [
     { id: '1', name: 'Figma', iconImage: `${import.meta.env.BASE_URL}images/Figma.png` },
     { id: '2', name: 'Sketch', iconImage: `${import.meta.env.BASE_URL}images/Sketch.png` },
-    { id: '3', name: 'Adobe Photoshop', iconImage: `${import.meta.env.BASE_URL}images/Photoshop.png` },
-    { id: '4', name: 'Adobe Illustrator', iconImage: `${import.meta.env.BASE_URL}images/Illustrator.png` },
-    { id: '5', name: 'Adobe XD', iconImage: `${import.meta.env.BASE_URL}images/XD.png` },
-    { id: '6', name: 'Adobe Indesign', iconImage: '' },
+    { id: '3', name: 'Photoshop', iconImage: `${import.meta.env.BASE_URL}images/Photoshop.png?v=2` },
+    { id: '4', name: 'Illustrator', iconImage: `${import.meta.env.BASE_URL}images/Illustrator.png?v=2` },
+    { id: '5', name: 'XD', iconImage: `${import.meta.env.BASE_URL}images/XD.png?v=2` },
+    { id: '6', name: 'Indesign', iconImage: `${import.meta.env.BASE_URL}images/indesign.png?v=2` },
     { id: '7', name: 'Gemini', iconImage: `${import.meta.env.BASE_URL}images/Gemini.png` },
     { id: '8', name: 'Dzine', iconImage: `${import.meta.env.BASE_URL}images/Dzine.png` },
     { id: '9', name: 'Claude', iconImage: `${import.meta.env.BASE_URL}images/Claude.png` },
     { id: '10', name: 'GitHub', iconImage: `${import.meta.env.BASE_URL}images/GitHub.png` },
-    { id: '11', name: 'VS Code', iconImage: '' },
+    { id: '11', name: 'VS Code', iconImage: `${import.meta.env.BASE_URL}images/vscode.png` },
     { id: '12', name: 'Sopify', iconImage: `${import.meta.env.BASE_URL}images/Sopify.png` }
   ],
   workflowLeft: [
-    { id: '1', step: 'Step.1', title: 'Research', desc: '시장 조사 및 경쟁사\n분석을 통한\n인사이트 도출', note: '', icon: 'BarChart3' },
-    { id: '2', step: 'Step.2', title: 'Strategy', desc: '핵심 USP 정의\n> 이미지/ 내용 가독\n우선순위 선정', note: '', icon: 'Lightbulb' },
+    { id: '1', step: 'Step.1', title: 'Research', desc: '시장 조사 및 경쟁사 분석을 통한 인사이트 도출', note: '', icon: 'BarChart3' },
+    { id: '2', step: 'Step.2', title: 'Strategy', desc: '핵심 USP 정의 > 이미지/ 내용 가독 우선순위 선정', note: '', icon: 'Lightbulb' },
     { id: '3', step: 'Step.3', title: 'Design', desc: '이미지 편집: Photoshop\n이미지 생성: Gemini, Dzine\n인쇄: Illustrator\n페이지: Figma\n프로그램 우선 작업', note: '', icon: 'Palette' },
-    { id: '4', step: 'Step.4', title: 'Review & Plan', desc: 'GA 결과값 데이터화\n: CTR/ROAS 분석,\n차기 프로젝트 반영', note: '', icon: 'CheckCircle2' }
+    { id: '4', step: 'Step.4', title: 'Review & Plan', desc: 'GA 결과값 데이터화 : CTR/ROAS 분석, 차기 프로젝트 반영', note: '', icon: 'CheckCircle2' }
   ],
   workflowRight: [
-    { id: '1', step: 'Step.1', title: 'Recognition', desc: '반복적/ 긴소요시간/ 톤앤매너 통일이\n필요한 디자인 작업물 인지', note: '', icon: 'BarChart3' },
-    { id: '2', step: 'Step.2', title: 'Frame Build', desc: '기본 가이드라인 구축:\n구글Gem > 제이슨프롬포트(HTML)\n에셋 생성', note: '', icon: 'Lightbulb' },
-    { id: '3', step: 'Step.3', title: 'Coding', desc: 'VScode 내 클로드코드를 활용한\n스타일 가이드 생성', note: '', icon: 'Code' },
-    { id: '4', step: 'Step.4', title: 'Share', desc: 'Github 등록 후 팀원 전체 사용 가능한\n디자인 Ai 공유 > 프로세스화 및\n오류 수정/업데이트', note: '', icon: 'CheckCircle2' }
+    { id: '1', step: 'Step.1', title: 'Recognition', desc: '반복적/ 긴소요시간/ 톤앤매너 통일이 필요한 디자인 작업물 인지', note: '', icon: 'BarChart3' },
+    { id: '2', step: 'Step.2', title: 'Frame Build', desc: '기본 가이드라인 구축: 구글Gem > 제이슨프롬포트(HTML) 에셋 생성', note: '', icon: 'Lightbulb' },
+    { id: '3', step: 'Step.3', title: 'Coding', desc: 'VScode 내 클로드코드를 활용한 스타일 가이드 생성', note: '', icon: 'Code' },
+    { id: '4', step: 'Step.4', title: 'Share', desc: 'Github 등록 후 팀원 전체 사용 가능한 디자인 Ai 공유 > 프로세스화 및 오류 수정/업데이트', note: '', icon: 'CheckCircle2' }
   ],
   portfolioPdfUrl: '',
   portfolioPdfName: '고희승_포트폴리오_2025.pdf',
@@ -412,11 +422,11 @@ const initialSiteConfig: SiteConfig = {
         photo: `${import.meta.env.BASE_URL}images/profile.png`
       },
       skills: [
-        { id: '1', name: 'Photoshop', level: '상' },
-        { id: '2', name: 'Illustrator', level: '상' },
-        { id: '5', name: 'XD', level: '중' },
-        { id: '3', name: 'Figma', level: '상' },
-        { id: '4', name: 'Sketch', level: '상' },
+        { id: '3', name: 'Photoshop', level: '상' },
+        { id: '4', name: 'Illustrator', level: '상' },
+        { id: '5', name: 'XD', level: '하' },
+        { id: '1', name: 'Figma', level: '중' },
+        { id: '2', name: 'Sketch', level: '상' },
         { id: '7', name: 'Ai (Gemini, Claude code)', level: '상' }
       ],
       experience: [
@@ -425,7 +435,7 @@ const initialSiteConfig: SiteConfig = {
         { id: '3', period: '2020. 06. 08 - 2023. 06. 31', role: '마케팅팀', company: '(주)글라이드', job: '라이브방송 기획 및 출연, 상세페이지/웹배너 제작, SNS(Instagram, Meta, Youtube) 운영' },
         { id: '4', period: '2018. 03. 12 - 2020. 03. 31', role: '디자인팀', company: '한국정보기술(주)', job: '조달청/지자체 제출용 제안서 및 발표자료 디자인(52건)' },
         { id: '5', period: '2016. 07. 25 - 2018. 02. 28', role: '마케팅팀', company: '(주)브로스코', job: '라이선스 상품화 디자인 제작/검수 및 온·오프라인 프로모션 디자인' },
-        { id: '6', period: '2015. 12. 08 - 2016. 06. 08', role: 'UX Research part', company: '(주)카카오', job: '앱 별 사용자 분석 및 결과보고서 작성, UX 분석용 임팩트 영상 편집' }
+        { id: '6', period: '2015. 12. 08 - 2016. 06. 08', role: 'UX Research part', company: '(주)카카오/그린맨파워', job: '앱 별 사용자 분석 및 결과보고서 작성, UX 분석용 임팩트 영상 편집' }
       ],
       license: [
         { id: '1', name: '컴퓨터 그래픽스운용기능사 1급', issuer: '한국산업인력공단' },
@@ -476,7 +486,7 @@ const initialSiteConfig: SiteConfig = {
         awardSubtitle: 'RECOGNITIONS',
         volunteerTitle: 'Volunteer',
         volunteerSubtitle: 'SOCIAL CONTRIBUTION',
-        educationTitle: 'EDUCATION / OFFLINE LECTURE',
+        educationTitle: 'EDUCATION',
         educationSubtitle: 'LEARNING & GROWTH'
       }
     },
@@ -499,7 +509,8 @@ const initialSiteConfig: SiteConfig = {
         { id: '2', name: '머티리얼즈파크(주)', role: 'Brand VMD', period: '2023.08 ~ 2025.05', reason: '직무 확장', business: 'B2C 도소매업', scale: '중소기업', revenue: '467억', employees: '110명', workplace: '성남 판교' },
         { id: '3', name: '(주)글라이드', role: 'Web/SNS Design', period: '2020.06 ~ 2023.06', reason: '경영 악화', business: '식품 판매업', scale: '대기업', revenue: '32억', employees: '-', workplace: '성남 판교' },
         { id: '4', name: '한국정보기술(주)', role: 'Proposal(PPT) Design', period: '2018.03 ~ 2020.03', reason: '근무 조건', business: '응용 소프트웨어 개발 및 공급업', scale: '중소기업', revenue: '726억', employees: '331명', workplace: '성남 판교' },
-        { id: '5', name: '(주)브로스코', role: 'Product Design', period: '2016.07 ~ 2018.02', reason: '조직 규모', business: '캐릭터 디자인 개발 라이센스 대행사', scale: '중소기업', revenue: '-', employees: '10+', workplace: '성남 판교' }
+        { id: '5', name: '(주)브로스코', role: 'Product Design', period: '2016.07 ~ 2018.02', reason: '조직 규모', business: '캐릭터 디자인 개발 라이센스 대행사', scale: '중소기업', revenue: '-', employees: '10+', workplace: '성남 판교' },
+        { id: '6', name: '(주)카카오/그린맨파워', role: 'UX Research', period: '2015.12 ~ 2016.06', reason: '계약 만료', business: '아웃소싱 대기업 파견 계약', scale: '중소기업', revenue: '-', employees: '1,000+', workplace: '성남 판교' }
       ]
     },
     project: {
@@ -1229,7 +1240,7 @@ function App() {
                       <button
                         onClick={() => {
                           const img = getPortfolioImage(project);
-                          if (img) setPortfolioViewerImage(img);
+                          if (img) setPortfolioViewerImage('portfolio/' + img);
                         }}
                         className="bg-white text-black px-6 py-3 rounded-[10px] font-bold flex items-center gap-2 cursor-pointer"
                       >
@@ -1257,11 +1268,11 @@ function App() {
 
         {/* Skills & AI Workflow */}
         <section id="COMPANY" className="mb-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="flex flex-col gap-16">
             <div>
               <h2 className="text-sm font-bold text-accent-purple tracking-widest uppercase mb-2">{siteConfig.expertiseLabel}</h2>
               <h3 className="text-4xl font-bold mb-8 whitespace-pre-line">{siteConfig.expertiseTitle}</h3>
-              <div className="grid grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
+              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
                 {siteConfig.skills.map(tool => {
                   const ToolIcon = ({
                     Palette, Layers, Figma, Monitor, Layout, Zap, Cpu, Terminal, Github, Code
@@ -1270,14 +1281,21 @@ function App() {
                     <motion.div
                       key={tool.id}
                       whileHover={{ y: -5, backgroundColor: 'rgba(139, 92, 246, 0.1)', borderColor: 'rgba(139, 92, 246, 0.3)' }}
-                      className="flex flex-col items-center justify-center gap-3 p-4 bg-bg-card rounded-[10px] border border-white/5 transition-all duration-300 group"
+                      onClick={() => {
+                        if (['Photoshop', 'Illustrator', 'XD', 'Indesign'].includes(tool.name) && tool.iconImage) {
+                          // Extract file name and remove ?v=2 string
+                          const filename = tool.iconImage.split('/').pop()?.split('?')[0];
+                          setPortfolioViewerImage(`images/${filename}`);
+                        }
+                      }}
+                      className={`flex flex-col items-center justify-center gap-3 p-4 bg-bg-card rounded-[10px] border border-white/5 transition-all duration-300 group ${['Photoshop', 'Illustrator', 'XD', 'Indesign'].includes(tool.name) ? 'cursor-pointer' : ''}`}
                     >
                       <div className="text-accent-purple transition-transform duration-300 group-hover:scale-110">
                         {tool.iconImage ? (
                           <img
                             src={tool.iconImage}
                             alt={tool.name}
-                            className="w-10 h-10 object-contain rounded-sm"
+                            className="w-10 h-10 object-cover rounded-sm"
                             referrerPolicy="no-referrer"
                           />
                         ) : (
@@ -1353,10 +1371,10 @@ function App() {
           </div>
         </section>
 
-        {/* Timeline & Awards */}
+        {/* Timeline & Experience */}
         <section id="SUBCONTRACT" className="mb-32">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2">
+          <div className="grid grid-cols-1 gap-12">
+            <div>
               <h3 className="text-3xl font-bold mb-8 flex items-center gap-2">
                 <Briefcase className="text-accent-purple" /> {siteConfig.experienceTitle}
               </h3>
@@ -1368,21 +1386,6 @@ function App() {
                     <div className="text-xl font-bold mb-1">{item.company}</div>
                     <div className="text-sm font-medium text-white/80 mb-3">{item.role}</div>
                     <p className="text-text-gray text-sm leading-relaxed">{item.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-3xl font-bold mb-8 flex items-center gap-2">
-                <FileText className="text-accent-purple" /> {siteConfig.awardsTitle}
-              </h3>
-              <div className="space-y-4">
-                {awards.map(award => (
-                  <div key={award.id} className="p-4 bg-bg-card rounded-[10px] border border-white/5">
-                    <div className="text-xs text-accent-purple font-bold mb-1">{award.year}</div>
-                    <div className="font-bold text-sm mb-1">{award.title}</div>
-                    <div className="text-xs text-text-gray">{award.organization}</div>
                   </div>
                 ))}
               </div>
@@ -1452,12 +1455,20 @@ function App() {
                 <X size={24} />
               </button>
             </div>
-            <div className="flex-1 overflow-hidden flex items-center justify-center bg-black" onClick={e => e.stopPropagation()}>
-              <img
-                src={`${import.meta.env.BASE_URL}portfolio/${portfolioViewerImage}`}
-                alt={portfolioViewerImage.replace('.png', '')}
-                className="w-full h-full object-contain"
-              />
+            <div className="flex-1 overflow-y-auto flex flex-col items-center bg-black" onClick={e => e.stopPropagation()}>
+              {portfolioViewerImage.toLowerCase().endsWith('.pdf') ? (
+                <iframe
+                  src={`${import.meta.env.BASE_URL}${portfolioViewerImage}`}
+                  title={portfolioViewerImage}
+                  className="w-full h-screen max-w-[1080px] bg-white"
+                />
+              ) : (
+                <img
+                  src={`${import.meta.env.BASE_URL}${portfolioViewerImage}`}
+                  alt={portfolioViewerImage.split('/').pop()?.replace('.png', '') || 'Portfolio'}
+                  className="w-full h-auto max-w-[1080px] object-cover"
+                />
+              )}
             </div>
           </motion.div>
         )}
